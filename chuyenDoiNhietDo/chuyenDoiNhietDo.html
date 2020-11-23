@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyenDoiNhietDo</title>
+</head>
+<body>
+<h1>Temperature Converter</h1>
+<h4>Type a value in the Fahrenheit filed to convert the value to Celcius: </h4>
+<label>Fahrenheit: </label> &nbsp;
+<input oninput="temperatureConvert(this.value)" size="30" type="number" id="input">
+<br>
+<span>Celcius: </span>
+<span id="output"></span>
+
+</body>
+<script>
+function temperatureConvert (temperature) {
+    temperature=document.getElementById('input').value;
+    if (temperature==='') {
+        document.getElementById('output').innerHTML ='';
+    }
+    else {
+        document.getElementById('output').innerHTML = (temperature-32) / 1.8;
+    }
+}
+</script>
+</html>
